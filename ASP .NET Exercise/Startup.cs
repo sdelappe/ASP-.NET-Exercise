@@ -32,6 +32,8 @@ namespace ASP_.NET_Exercise
                 return conn;
             });
 
+            // transient service will return a new instance every time a request is made
+            // using b/c it is lightweight and this is a stateless service
             services.AddTransient<IProductRepository, ProductRepository>();
 
             services.AddControllersWithViews();
